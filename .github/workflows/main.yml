@@ -26,3 +26,14 @@ jobs:
 
       - name: Run tests
         run: PYTHONPATH=. pytest
+
+      - name: Build Docker image
+        run: docker build -t prime_pack .
+
+      - name: Tag Docker image
+        run: docker tag prime_pack abekeabeke/prime_pack
+
+      - name: Push Docker image
+        run: |
+          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+            docker push abekeabeke/prime_pack
