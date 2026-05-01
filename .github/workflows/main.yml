@@ -21,14 +21,16 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install pytest
-        run: pip install pytest
+      - name: Install dependencies
+        run: pip install pytest build
 
       - name: Run tests
-        run: PYTHONPATH=. pytest
-      
-      - name: Install build tools
-        run: pip install build
+        run: |
+          export PYTHONPATH=$PWD
+          pytest
+
+      - name: Clean dist
+        run: rm -rf dist
 
       - name: Build package
         run: python -m build
@@ -38,18 +40,6 @@ jobs:
         with:
           name: package
           path: dist/*
-
-      - name: Publish to TestPyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          repository-url: https://test.pypi.org/legacy/
-          password: ${{ secrets.PYPI_API_TOKEN }}
-
-      - name: Clean dist
-        run: rm -rf dist
-
-      - name: Build package
-        run: python -m build
 
       - name: Publish to TestPyPI
         uses: pypa/gh-action-pypi-publish@release/v1
