@@ -27,7 +27,7 @@ jobs:
       - name: Run tests
         run: |
           export PYTHONPATH=$PWD
-          pytest
+          pytest tests
 
       - name: Clean dist
         run: rm -rf dist
