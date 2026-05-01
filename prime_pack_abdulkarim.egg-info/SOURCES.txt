@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+prime_pack_abdulkarim/__init__.py
+prime_pack_abdulkarim/__main__.py
+prime_pack_abdulkarim.egg-info/PKG-INFO
+prime_pack_abdulkarim.egg-info/SOURCES.txt
+prime_pack_abdulkarim.egg-info/dependency_links.txt
+prime_pack_abdulkarim.egg-info/top_level.txt
+tests/test_basic.py

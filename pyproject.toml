@@ -1,0 +1,12 @@
+[project]
+name = "prime_pack_abdulkarim"
+version = "0.1.0"
+description = "Prime number package"
+authors = [
+    {name = "Abdulkarim"}
+]
+dependencies = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
