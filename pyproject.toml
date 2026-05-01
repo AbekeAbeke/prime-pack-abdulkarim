@@ -5,7 +5,7 @@ description = "Prime number package"
 authors = [
     {name = "Abdulkarim"}
 ]
-dependencies = []
+dependencies = ["click"]
 
 [build-system]
 requires = ["setuptools"]
