@@ -1,0 +1,19 @@
+[project]
+name = "prime_pack_abdulkarim"
+version = "0.1.4"
+description = "Prime number package"
+authors = [
+    {name = "Abdulkarim"}
+]
+dependencies = ["click", "pytest"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["prime_pack_abdulkarim*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
