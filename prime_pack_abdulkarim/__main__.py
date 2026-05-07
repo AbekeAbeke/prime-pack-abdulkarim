@@ -1,12 +1,3 @@
-Version: 1
-from . import pipeline
-
-def main():
-    print(pipeline())
-
-if __name__ == "__main__":
-    main()
-
 import click
 from . import primes, checksum
 import random
@@ -22,4 +13,3 @@ def main(count: int, seed: int):
 
 if __name__ == "__main__":
     main()
-    

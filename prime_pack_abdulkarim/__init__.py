@@ -1,5 +1,6 @@
-# version 1
 import random
+
+
 def is_prime(x: int) -> bool:
     if x < 2:
         return False
@@ -29,4 +30,4 @@ def pipeline() -> int:
     nums = primes(1000)
     random.seed(100)
     random.shuffle(nums)
-    return checksum(nums)   # ✅ MUST return
+    return checksum(nums)

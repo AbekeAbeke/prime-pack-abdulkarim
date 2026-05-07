@@ -6,4 +6,4 @@ COPY . .
 
 RUN pip install .
 
-CMD ["python", "-m", "prime_pack_abdulkarim"]
+ENTRYPOINT ["python", "-m", "prime_pack_abdulkarim"]
